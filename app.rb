@@ -4,6 +4,7 @@ require './lib/hangperson_game.rb'
 
 class HangpersonApp < Sinatra::Base
 
+  
   enable :sessions
   register Sinatra::Flash
   

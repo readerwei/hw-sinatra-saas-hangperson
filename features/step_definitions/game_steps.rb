@@ -31,6 +31,7 @@ When /^I make the following guesses:(.*)$/ do |guesses|
 end
 
 Then /^the word should read "(.*)"$/ do |word|
+  #debugger
   page.should have_content(word)
 end
 

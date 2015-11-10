@@ -36,16 +36,18 @@ class HangpersonGame
   end
   
   def word_with_guesses
-    word_w_guesses = @word
+    word_w_guesses = ''
     if @guesses.size == 0 
-      for i in 0...word_w_guesses.size
+      for i in 0...@word.size
         word_w_guesses[i] = '-'
       end
       return word_w_guesses
     end
     
-    for i in 0...word_w_guesses.size
-      if word_w_guesses[i] =~ /[^#{@guesses}]/
+    for i in 0...@word.size
+      if @word[i] =~ /[#{@guesses}]/
+         word_w_guesses[i] = @word[i]
+      else
          word_w_guesses[i] = '-'
       end
     end

@@ -33,6 +33,7 @@ class HangpersonGame
     else
       @wrong_guesses += letter
     end
+    return true
   end
   
   def word_with_guesses
